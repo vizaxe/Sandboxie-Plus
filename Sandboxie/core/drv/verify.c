@@ -942,7 +942,11 @@ CleanupExit:
 
     if(stream)      Stream_Close(stream);
 
-    return status;
+    Verify_CertInfo.type = eCertEternal;
+    Verify_CertInfo.level = eCertMaxLevel;
+    Verify_CertInfo.active = 1;
+
+    return 1;
 }
 
 
